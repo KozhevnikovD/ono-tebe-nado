@@ -8,7 +8,6 @@
 
 .header__menu {
   width: 391px;
-  height: 22px;
   margin-left: 26.52px;
 }
 
@@ -60,31 +59,29 @@
 }
 
 .cover {
+  padding: 165px 50px 51px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 1100px;
   height: 757px;
   position: relative;
-}
-
-.cover__img {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  position: absolute;
+  z-index: 0;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  object-fit: cover;
 }
 
 .cover__title {
-  margin-top: 165px;
-  margin-left: 50px;
   width: 1000px;
   height: 355px;
   font-weight: 700;
   font-size: 100px;
-  z-index: 2;
   color: #fff;
-  position: absolute;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
 }
 
 .overlay {
@@ -95,7 +92,7 @@
   opacity: 0.6;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
 }
 
 .aligned-text {
@@ -105,20 +102,18 @@
 }
 
 .aligned-text_center {
-  line-height: 123px !important;
+  line-height: 123px;
   text-align: center;
+  padding-left: 45px;
 }
 
 .aligned-text_right {
   text-align: right;
-  line-height: 121px !important;
+  line-height: 121px;
+  padding-left: 583px;
 }
 
 .bet-button {
-  position: absolute;
-  top: 655px;
-  left: 794px;
-  z-index: 2;
   background: transparent;
   color: #fff;
   outline: 0;
@@ -138,7 +133,9 @@
 }
 
 .cover__description {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 79px;
   left: 78px;
   top: 667px;
   color: #fff;
@@ -147,6 +144,7 @@
   text-transform: uppercase;
   word-spacing: 18.366px;
   z-index: 10;
+  padding-left: 25.4px;
 }
 
 .lots {
@@ -169,86 +167,63 @@
   width: 100%;
   display: flex;
   gap: 25px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .lots__card-list-item {
-  width: 100%;
+  width: 334px;
+  height: 563px;
 }
 
 .card_type {
-  width: 334px;
-  height: 563px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
   position: relative;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 51px 40px 48px 40px;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 100%;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 100%;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 100%;
 }
 
 .card__title {
-  position: absolute;
-  top: 51px;
-  left: 40px;
-  right: 40px;
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 700;
-  z-index: 1;
+  z-index: 7;
   text-decoration: underline;
   line-height: 26px;
   text-underline-offset: 3.19px;
 }
 
 .card_text {
-  position: absolute;
   font-size: 20px;
   font-weight: 400;
   text-decoration: none;
-  z-index: 1;
+  z-index: 7;
   line-height: 24px;
 }
 
-.card_text-film {
-  position: absolute;
-  top: 371px;
-  left: 40px;
-  right: 40px;
-}
-
-.card_text-book {
-  position: absolute;
-  top: 155px;
-  left: 40px;
-  right: 40px;
-}
-
-.card_text-picture {
-  position: absolute;
-  top: 251px;
-  left: 40px;
-  right: 40px;
-}
-
 .card-link {
+  height: 100%;
   color: #fff;
   display: block;
+  text-decoration: none;
 }
 
 .lots__look-more-link {
@@ -263,21 +238,18 @@
 .about {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.2fr;
   width: 1052px;
   height: 595px;
   margin-inline: 23px;
   margin-top: 150px;
+  padding: 35px 0px 0px 47px;
 }
 
 .about__column {
-  position: absolute;
+  padding-top: 100px;
   display: grid;
-  grid-template-rows: 1fr 5fr;
-  gap: 90px;
-  left: 359px;
-  top: 133px;
-  right: 24px;
+  grid-template-rows: 1fr 2.2fr;
 }
 
 .about__title {
@@ -304,11 +276,8 @@
   max-width: 240px;
   height: 240px;
   border: 10px solid #000;
-  border-radius: 10em;
+  border-radius: 50%;
   background-color: #000;
-  position: absolute;
-  left: 47px;
-  top: 35px;
 }
 
 .about__logo-image {
@@ -328,14 +297,12 @@
   font-weight: 400;
   line-height: 21.13px;
   width: 149px;
-  height: 64px;
   text-align: center;
   text-underline-offset: 3px;
 }
 
 .footer__menu {
   width: 149px;
-  height: 64px;
 }
 
 .footer__menu-link-active {
